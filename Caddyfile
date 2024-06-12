@@ -1,0 +1,7 @@
+your_domain.com {
+	@websockets {
+		header Connection *Upgrade*
+		header Upgrade websocket
+	}
+	reverse_proxy @websockets 127.0.0.1:10086
+}
